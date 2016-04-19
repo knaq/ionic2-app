@@ -1,12 +1,16 @@
-import {Page} from 'ionic-angular';
+import {NavController, NavParams, Page} from 'ionic-angular';
 
 
 @Page({
-    templateUrl: 'build/pages/skills-detail/skill-detail.html'
+    templateUrl: 'build/pages/skill-detail/skill-detail.html'
 })
-export class SkillsDetailPage {
-    constructor(nav: NavController) {
+export class SkillDetailPage {
+    static get parameters() {
+        return [[NavParams]];
+    }
+    constructor(nav, navParams) {
         this.nav = nav;
+        this.navParams = navParams;
     }
     goBack() {
         this.nav.pop();

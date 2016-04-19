@@ -1,10 +1,9 @@
 import {Page} from 'ionic-angular';
-import {SkillsDetailPage} from '../skill-detail/skill-detail';
 
 @Page({
-  templateUrl: 'build/pages/profile/profile.html'
+  templateUrl: 'build/pages/portfolio-detail/portfolio-detail.html'
 })
-export class Profile {
+export class PortfolioDetailPage {
   constructor() {
 
   }
