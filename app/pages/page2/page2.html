@@ -1,21 +1,21 @@
 <ion-navbar *navbar hideBackButton>
 
   <ion-title>
-    Segments
+    Profile
   </ion-title>
 
 </ion-navbar>
 
-<ion-toolbar [attr.primary]="isAndroid ? '' : null" >
+<ion-toolbar [attr.primary]="isAndroid ? '' : null">
   <ion-segment [(ngModel)]="pet" [attr.light]="isAndroid ? '' : null">
     <ion-segment-button value="puppies">
-      Puppies
+      About
     </ion-segment-button>
     <ion-segment-button value="kittens">
-      Kittens
+      Skills
     </ion-segment-button>
     <ion-segment-button value="ducklings">
-      Ducklings
+      Portfolio
     </ion-segment-button>
   </ion-segment>
 </ion-toolbar>
@@ -23,89 +23,111 @@
 
 <ion-content>
 
-<!--   <div padding>
+  <!--   <div padding>
   </div>  -->
 
   <div [ngSwitch]="pet">
     <ion-list *ngSwitchWhen="'puppies'">
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-puppy-1.jpg">
-        </ion-thumbnail>
-        <h2>Ruby</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-puppy-2.jpg">
-        </ion-thumbnail>
-        <h2>Oscar</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-puppy-4.jpg">
-        </ion-thumbnail>
-        <h2>Zoey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-puppy-3.jpg">
-        </ion-thumbnail>
-        <h2>Otto</h2>
-      </ion-item>
+      <ion-card>
+
+        <img src="img/bjork-live.png" />
+
+        <ion-card-content>
+          <h2 class="card-title">
+        Björk
+        <button secondary>Background Check Status</button>
+      </h2>
+          <p>
+            Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
+          </p>
+        </ion-card-content>
+
+        <ion-item>
+          <ion-icon name='musical-notes' item-left style="color: #d03e84"></ion-icon>
+          Albums
+          <ion-badge item-right>9</ion-badge>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name='logo-twitter' item-left style="color: #55acee"></ion-icon>
+          Followers
+          <ion-badge item-right>260k</ion-badge>
+        </ion-item>
+
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          Contact Info
+        </ion-card-header>
+
+        <ion-list>
+          <button ion-item>
+      <ion-icon name="cart" item-left></ion-icon>
+      E-mail
+    </button>
+
+          <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      Phone Number
+    </button>
+        </ion-list>
+
+      </ion-card>
+
     </ion-list>
 
     <ion-list *ngSwitchWhen="'kittens'">
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-kitten-1.jpg">
-        </ion-thumbnail>
-        <h2>Luna</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-kitten-3.jpg">
-        </ion-thumbnail>
-        <h2>Milo</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-kitten-4.jpg">
-        </ion-thumbnail>
-        <h2>Bandit</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-kitten-2.jpg">
-        </ion-thumbnail>
-        <h2>Nala</h2>
-      </ion-item>
+      <button ion-item (click)="goToSkillsPage()">
+        <ion-icon name='musical-notes' item-left style="color: #d03e84"></ion-icon>
+        Web-Dev
+        <ion-badge item-right>9</ion-badge>
+      </button>
+      
+
+      <button ion-item (click)="goToSkillsPage()">
+        <ion-icon name='logo-twitter' item-left style="color: #55acee"></ion-icon>
+        Responsive Web Design
+        <ion-badge item-right>260k</ion-badge>
+      </button>
     </ion-list>
 
     <ion-list *ngSwitchWhen="'ducklings'">
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-duckling-1.jpg">
-        </ion-thumbnail>
-        <h2>Daffy</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-duckling-2.jpg">
-        </ion-thumbnail>
-        <h2>Huey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-duckling-3.jpg">
-        </ion-thumbnail>
-        <h2>Dewey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-left>
-          <img src="img/thumbnail-duckling-4.jpg">
-        </ion-thumbnail>
-        <h2>Louie</h2>
-      </ion-item>
+      <ion-card>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Nine_inch_nails_-_Staples_Center_-_11-8-13_(10755555065_16053de956_o).jpg"
+        />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Nine_inch_nails_-_Staples_Center_-_11-8-13_(10755555065_16053de956_o).jpg"
+        />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Nine_inch_nails_-_Staples_Center_-_11-8-13_(10755555065_16053de956_o).jpg"
+        />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+      </ion-card>
     </ion-list>
   </div>
 
