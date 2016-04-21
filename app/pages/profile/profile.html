@@ -1,0 +1,190 @@
+<ion-navbar *navbar hideBackButton>
+
+  <ion-title>
+    Profile
+  </ion-title>
+
+</ion-navbar>
+
+<ion-toolbar [attr.primary]="isAndroid ? '' : null">
+  <ion-segment [(ngModel)]="pet" [attr.light]="isAndroid ? '' : null">
+    <ion-segment-button value="puppies">
+      About
+    </ion-segment-button>
+    <ion-segment-button value="kittens">
+      Skills
+    </ion-segment-button>
+    <ion-segment-button value="ducklings">
+      Portfolio
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+
+<ion-content>
+
+  <!--   <div padding>
+  </div>  -->
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchWhen="'puppies'">
+      <ion-card>
+
+        <img src="https://cms-assets.tutsplus.com/uploads/users/144/profiles/2366/profileImage/profile_thumbnail%20low.jpg" />
+
+        <ion-card-content>
+          <h2 class="card-title">
+        Björk
+        <button secondary>Background Check Status</button>
+      </h2>
+          <p>
+            Björk first came to prominence as one of the lead vocalists of the avant pop Icelandic sextet the Sugarcubes, but when...
+          </p>
+        </ion-card-content>
+
+        <ion-item>
+          <ion-icon name='musical-notes' item-left style="color: #d03e84"></ion-icon>
+          Albums
+          <ion-badge item-right>9</ion-badge>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name='logo-twitter' item-left style="color: #55acee"></ion-icon>
+          Followers
+          <ion-badge item-right>260k</ion-badge>
+        </ion-item>
+
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          Contact Info
+        </ion-card-header>
+
+        <ion-list>
+          <button ion-item>
+      <ion-icon name="cart" item-left></ion-icon>
+      E-mail
+    </button>
+
+          <button ion-item>
+      <ion-icon name="medical" item-left></ion-icon>
+      Phone Number
+    </button>
+        </ion-list>
+
+      </ion-card>
+
+    </ion-list>
+
+    <ion-list *ngSwitchWhen="'kittens'">
+      <button ion-item (click)="goToSkillsPage()">
+        <ion-icon name='musical-notes' item-left style="color: #d03e84"></ion-icon>
+        Web-Dev
+        <ion-badge item-right>9</ion-badge>
+      </button>
+
+
+      <button ion-item (click)="goToSkillsPage()">
+        <ion-icon name='logo-twitter' item-left style="color: #55acee"></ion-icon>
+        Responsive Web Design
+        <ion-badge item-right>5</ion-badge>
+      </button>
+    </ion-list>
+
+    <ion-list *ngSwitchWhen="'ducklings'">
+      <ion-card>
+        <img src="http://www.onlinebusinessasia.com/wp-content/uploads/2015/03/coding-website-from-scratch.jpg" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col>
+            <button primary clear small>
+        <ion-icon name='thumbs-up'></ion-icon>
+        <div>30 Likes</div>
+      </button>
+          </ion-col>
+          <ion-col>
+            <button primary clear small>
+        <ion-icon name='text'></ion-icon>
+        <div>64 Comments</div>
+      </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              30yr ago
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="http://xzdl43v0mdf2m45tz2aj7kkv35.wpengine.netdna-cdn.com/wp-content/uploads/2014/10/graphic-design-examples-780x400.jpg"
+        />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col>
+            <button primary clear small>
+        <ion-icon name='thumbs-up'></ion-icon>
+        <div>30 Likes</div>
+      </button>
+          </ion-col>
+          <ion-col>
+            <button primary clear small>
+        <ion-icon name='text'></ion-icon>
+        <div>64 Comments</div>
+      </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              30yr ago
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+      <ion-card>
+        <img src="http://184ynl3xrypi2ruscv1a607s.wpengine.netdna-cdn.com/wp-content/uploads/2013/03/databases.jpg" />
+        <ion-card-content>
+          <ion-card-title>
+            Nine Inch Nails Live
+          </ion-card-title>
+          <p>
+            The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+          </p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col>
+            <button primary clear small>
+        <ion-icon name='thumbs-up'></ion-icon>
+        <div>30 Likes</div>
+      </button>
+          </ion-col>
+          <ion-col>
+            <button primary clear small>
+        <ion-icon name='text'></ion-icon>
+        <div>64 Comments</div>
+      </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              30yr ago
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </ion-list>
+  </div>
+
+
+</ion-content>
