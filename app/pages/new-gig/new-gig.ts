@@ -10,11 +10,13 @@ import {Page, NavController} from 'ionic-angular';
   templateUrl: 'build/pages/new-gig/new-gig.html',
 })
 export class NewGigPage {
-  static get parameters() {
-    return [[NavController]];
-  }
-
-  constructor(nav) {
+  nav: NavController;
+  
+  constructor(nav: NavController) {
     this.nav = nav;
+  }
+  
+  postJob() {
+    this.nav.pop();
   }
 }

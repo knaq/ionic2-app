@@ -1,4 +1,6 @@
 import {Page, NavController} from 'ionic-angular';
+import {GigDetailsPage} from '../gig-details/gig-details';
+import {NewGigPage} from '../new-gig/new-gig';
 
 /*
   Generated class for the GigsPage page.
@@ -10,11 +12,17 @@ import {Page, NavController} from 'ionic-angular';
   templateUrl: 'build/pages/gigs/gigs.html',
 })
 export class GigsPage {
-  static get parameters() {
-    return [[NavController]];
+  nav: NavController;
+  
+  constructor(nav: NavController) {
+    this.nav = nav;
   }
   
-  constructor(nav) {
-    this.nav = nav;
+  viewGig() {
+    this.nav.push(GigDetailsPage);
+  }
+  
+  createNewGig() {
+    this.nav.push(NewGigPage);
   }
 }

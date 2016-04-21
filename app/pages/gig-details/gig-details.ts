@@ -10,11 +10,9 @@ import {Page, NavController} from 'ionic-angular';
   templateUrl: 'build/pages/gig-details/gig-details.html',
 })
 export class GigDetailsPage {
-  static get parameters() {
-    return [[NavController]];
-  }
+  nav: NavController;
 
-  constructor(nav) {
+  constructor(nav: NavController) {
     this.nav = nav;
   }
 }

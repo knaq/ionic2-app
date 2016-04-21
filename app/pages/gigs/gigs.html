@@ -11,7 +11,7 @@
 <ion-content padding class="gigs">
   <ion-list>
     <ion-item-sliding>
-      <ion-item>
+      <ion-item (click)="viewGig()">
         <ion-avatar item-left>
           <p class="demo-pic"></p>
         </ion-avatar>
@@ -24,7 +24,7 @@
     </ion-item-sliding>
     
     <ion-item-sliding>
-      <ion-item>
+      <ion-item (click)="viewGig()">
         <ion-avatar item-left>
           <p class="demo-pic"></p>
         </ion-avatar>
@@ -37,7 +37,7 @@
     </ion-item-sliding>
     
     <ion-item-sliding>
-      <ion-item>
+      <ion-item (click)="viewGig()">
         <ion-avatar item-left>
           <p class="demo-pic"></p>
         </ion-avatar>
@@ -50,5 +50,5 @@
     </ion-item-sliding>
   </ion-list>
 
-  <button class="fab" fab>+</button>
+  <button class="fab" (click)="createNewGig()" fab>+</button>
 </ion-content>
